@@ -1,13 +1,19 @@
 <script>
 
-const page = {
-  url: "",
-  title: ""
-
+// global company variables -> other company variables such as 'name' and 'url' have been place in static locations in the schema
+const global = {
+	logoUrl: "", // url of the company logo
+	ratingCount: "", // total ratings
+	ratingValue: "" // average rating out of 5
 };
-  
-    
 
+// page-specific variables
+const page = {
+  url: "", // url of the current page
+  title: "", // title of the webpage
+	product: "" // the name of the inquireable object/product on the page -> maybe the name of the hotel? -> including this might unlock the "Product" rich snippet
+};
+	
 </script>
 
 <script type="application/ld+json">
@@ -55,13 +61,13 @@ const page = {
 					"url": "https://www.curatorhotelsandresorts.com",
 					"name": "Curator Hotel & Resort Collection",
 					"slogan": "Hotels as Indipendent as You."
-        			}
+        }
 			},
-      			{
-        			"@type": "ImageObject",
-        			"@id": "https://www.curatorhotelsandresorts.com#logo",
-        			"url": "https://www.camginc.com/wp-content/uploads/2022/06/camg-logo_jvx1w4-1.png.webp",
-      "contentUrl": "https://www.camginc.com/wp-content/uploads/2022/06/camg-logo_jvx1w4-1.png.webp",
+      {
+				"@type": "ImageObject",
+				"@id": global.logoUrl + "#logo",
+        "url": global.logoUrl,
+				"contentUrl": global.logoUrl,
 				"caption": "Curator Hotel & Resort Collection Logo",
 				"copyrightNotice": "All rights reserved",
 				"creditText": "Curator Hotel & Resort Collection",
@@ -71,35 +77,29 @@ const page = {
 					"@type": "Organization",
 					"@id": "https://www.curatorhotelsandresorts.com#organization"
 				}
-      			},
+      },
 			{
 				"@type": "AggregateRating",
-				"@id": "https://www.camginc.com/services/seo-lawyers-personal-injury#aggregateRating",
-				"url": "https://www.camginc.com/services/seo-lawyers-personal-injury",
-				"ratingCount": "16", // pulled from Facebook profile
-				"ratingValue": "4.5", // pulled from Facebook profile
-				"bestRating": "5",
+				"@id": page.url + "#aggregateRating",
+				"url": page.url,
+				"ratingCount": global.ratingCount,
+				"ratingValue": globa.ratingValue,
+				"bestRating": "5", // assuming there is at least one 5-star review
 				"itemReviewed": {
 					"@type": "Product",
-					"@id": "https://www.camginc.com/services/seo-lawyers-personal-injury#product",
-					"url": "https://www.camginc.com/services/seo-lawyers-personal-injury",
-					"name": "SEO for Personal Injury Lawyers",
+					"@id": page.url + "#product",
+					"url": page.url,
+					"name": page.product,
 					"aggregateRating": {
-						"@id": "https://www.camginc.com/services/seo-lawyers-personal-injury#aggregateRating",
-						"url": "https://www.camginc.com/services/seo-lawyers-personal-injury",
-						"ratingCount": "16", // pulled from Facebook profile
-						"ratingValue": "4.5", // pulled from Facebook profile
-						"bestRating": "5"
-					},
-					"offers": {
-						"@type": "AggregateOffer",
-						"@id": "https://www.camginc.com/services/seo-lawyers-personal-injury#aggregateOffer",
-						"lowPrice": 5000, // this is assuming your price range starts at 5k
-						"highPrice": 100000, // this is assuming your price range goes up to 100k
-						"priceCurrency": "USD"
+						"@id": page.url + "#aggregateRating",
+						"url": page.url,
+						"ratingCount": global.ratingCount,
+						"ratingValue": globa.ratingValue,
+						"bestRating": "5", // assuming there is at least one 5-star review
 					}
 				}
 			}
+			// other schema types (that are page or collection-template specific) can be added here as an array under the "@graph" key
 		]
 	}
 </script>
