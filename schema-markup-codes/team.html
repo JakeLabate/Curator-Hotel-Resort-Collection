@@ -1,0 +1,63 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "@id": "URL of the person's profile or page",
+  "name": "Full Name",
+  "alternateName": "Nickname or Alias",
+  "description": "Short description or bio",
+  "url": "Personal website or portfolio",
+  "image": "URL to profile image",
+  "jobTitle": "Job Position or Title",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Employer's Name"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Name of School or University"
+  },
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Organization or Club Membership"
+  },
+  "birthDate": "YYYY-MM-DD",
+  "gender": "Male/Female/Other",
+  "nationality": "Country of nationality",
+  "email": "email@example.com", // optional if want to be kept private
+  "telephone": "+1-555-555-5555", // optional if want to be kept private
+  "address": {
+    "@type": "PostalAddress", // use HQ of the company
+    "streetAddress": "1234 Elm Street",
+    "addressLocality": "City",
+    "addressRegion": "State",
+    "postalCode": "ZIP Code",
+    "addressCountry": "Country"
+  },
+  "colleague": [
+    {
+      "@type": "Person",
+      "name": "Colleague Name"
+    },
+    "... other colleagues ..."
+  ],
+  "knows": [
+    {
+      "@type": "Person",
+      "@id": "@id of other team members"
+    },
+    "... other team memebers ..."
+  ],
+  "brand": {
+    "@type": "Brand",
+    "name": "Personal Brand or Product" // company brand
+  },
+  "honorificPrefix": "Mr./Mrs./Dr./etc.",
+  "honorificSuffix": "Jr./Sr./PhD./etc.",
+  "height": "Height in appropriate unit",
+  "workLocation": {
+    "@type": "Place",
+    "name": "Work Location" // company HQ location
+  }
+}
+</script>
