@@ -1,0 +1,41 @@
+<!-- for the /visionaries/ pages: https://curatorhotelsandresorts-stage.afinesite.com/visionaries/viceroy-hotels-resorts for example -->
+
+<script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "@id": "" // page url + "#organization"
+  "url": "", // page url
+  "name": "", // visionary/collection name
+  "owns": [ // push item for each hotel in the collecton
+    {
+      "@type": "LodgingBusiness",
+      "@id": "", // url of the curator hotel page + "#lodgingBusiness"
+      "url": "", // url of the curator hotel page
+      "name": "Hotel 1",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Hotel 1 Street",
+        "addressLocality": "City",
+        "addressRegion": "State",
+        "postalCode": "12345",
+        "addressCountry": "Country"
+      }
+    },
+    {
+      "@type": "Hotel",
+      "@id": "", // url of the curator hotel page + "#lodgingBusiness"
+      "url": "", // url of the curator hotel page
+      "name": "Hotel 2",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "456 Hotel 2 Street",
+        "addressLocality": "City",
+        "addressRegion": "State",
+        "postalCode": "67890",
+        "addressCountry": "Country"
+      }
+    }
+  ]
+}
+</script>
