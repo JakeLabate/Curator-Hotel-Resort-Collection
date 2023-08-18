@@ -1,0 +1,105 @@
+<script>
+
+const page = {
+  url: "",
+  title: ""
+
+};
+  
+    
+
+</script>
+
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "Website",
+				"@id": "https://www.curatorhotelsandresorts.com#website",
+				"url": "https://www.curatorhotelsandresorts.com",
+				"name": "Curator Hotel & Resort Collection"
+			},
+			{
+				"@type": "WebPage",
+				"@id": page.url + "#webPage",
+				"url": page.url,
+				"name": page.title,
+				"isPartOf": {
+					"@type": "Website",
+					"@id": "https://www.curatorhotelsandresorts.com#website"
+				}
+			},
+			{
+				"@type": "BreadcrumbList",
+				"@id": page.url + "#breadcrumbList",
+				"name": page.title,
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"@id": page.url + "#breadcrumbItem",
+						"name": page.title,
+						"position": 1,
+						"item": page.url
+					}
+				]
+			},
+			{
+				"@type": "Organization",
+				"@id": "https://www.curatorhotelsandresorts.com#organization",
+				"url": "https://www.curatorhotelsandresorts.com",
+				"name": "Curator Hotel & Resort Collection",
+				"brand": {
+					"@type": "Brand",
+					"@id": "https://www.curatorhotelsandresorts.com#brand",
+					"url": "https://www.curatorhotelsandresorts.com",
+					"name": "Curator Hotel & Resort Collection",
+					"slogan": "Hotels as Indipendent as You."
+        			}
+			},
+      			{
+        			"@type": "ImageObject",
+        			"@id": "https://www.curatorhotelsandresorts.com#logo",
+        			"url": "https://www.camginc.com/wp-content/uploads/2022/06/camg-logo_jvx1w4-1.png.webp",
+      "contentUrl": "https://www.camginc.com/wp-content/uploads/2022/06/camg-logo_jvx1w4-1.png.webp",
+				"caption": "Curator Hotel & Resort Collection Logo",
+				"copyrightNotice": "All rights reserved",
+				"creditText": "Curator Hotel & Resort Collection",
+				"license": "https://www.curatorhotelsandresorts.com",
+				"acquireLicensePage": "https://www.curatorhotelsandresorts.com",
+				"creator": {
+					"@type": "Organization",
+					"@id": "https://www.curatorhotelsandresorts.com#organization"
+				}
+      			},
+			{
+				"@type": "AggregateRating",
+				"@id": "https://www.camginc.com/services/seo-lawyers-personal-injury#aggregateRating",
+				"url": "https://www.camginc.com/services/seo-lawyers-personal-injury",
+				"ratingCount": "16", // pulled from Facebook profile
+				"ratingValue": "4.5", // pulled from Facebook profile
+				"bestRating": "5",
+				"itemReviewed": {
+					"@type": "Product",
+					"@id": "https://www.camginc.com/services/seo-lawyers-personal-injury#product",
+					"url": "https://www.camginc.com/services/seo-lawyers-personal-injury",
+					"name": "SEO for Personal Injury Lawyers",
+					"aggregateRating": {
+						"@id": "https://www.camginc.com/services/seo-lawyers-personal-injury#aggregateRating",
+						"url": "https://www.camginc.com/services/seo-lawyers-personal-injury",
+						"ratingCount": "16", // pulled from Facebook profile
+						"ratingValue": "4.5", // pulled from Facebook profile
+						"bestRating": "5"
+					},
+					"offers": {
+						"@type": "AggregateOffer",
+						"@id": "https://www.camginc.com/services/seo-lawyers-personal-injury#aggregateOffer",
+						"lowPrice": 5000, // this is assuming your price range starts at 5k
+						"highPrice": 100000, // this is assuming your price range goes up to 100k
+						"priceCurrency": "USD"
+					}
+				}
+			}
+		]
+	}
+</script>
